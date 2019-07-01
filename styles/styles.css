@@ -6,12 +6,11 @@
 
 html {
     font-size: 16px;
-    /* font-family: 'Rubik', sans-serif;*/
+    font-family: 'Rubik', sans-serif;
 }
 
 body {
     margin: 0;
-    font-family: 'Rubik', sans-serif;
 }
 
 .header {
@@ -19,13 +18,17 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
-    margin-bottom: 13px;
+    padding-top: 10px;
+    padding-bottom: 13px;
+    position: fixed;
+    background-color: white;
+    width: 100vw;
 }
 
 .logo {
     width: 155px;
-    padding: 10px;
+    padding: 0 10px;
+    box-sizing: content-box;
 }
 
 .list {
@@ -33,15 +36,15 @@ body {
     align-items: center;
     justify-content: space-around;
     list-style-type: none;
-    margin: 0;
+    margin-top: 10px;
 }
 
 .link_m {
     font-size: 16px;
     color: #4a4a4a;
     text-decoration: none;
-    padding: 5px;
     margin: 0 10px;
+    font-family: 'Rubik', sans-serif;
 }
 
 .main {
@@ -52,23 +55,30 @@ body {
     text-align: center;
     align-items: center;
     justify-content: center;
+    padding-top: 20vh;
 }
 
 .title {
-    transform: translate(0, -70%);
+    font-size: 30px;
 }
 
-
-/*
-El logo tiene un tamaño de 155px de ancho.
-El menú de la cabecera se coloca bajo el logo.
-El texto de las opciones del menú tiene un tamaño de 16px.
-El texto del título "Creando Diversidad Digital" tiene un tamaño de 30px.
-
-
-
-#4a4a4a (Texto del menú)
-#3CDBC0 (color de fondo de la página)
-#FFFFFF (Color de texto de "Creando diversidad digital")
-
-*/
+@media all and (min-width: 768px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 10px;
+    }
+    .logo {
+        padding: 10px 30px;
+    }
+    .list {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        list-style-type: none;
+        margin-top: 10px;
+    }
+    .nav {
+        margin-right: 20px;
+    }
+}
